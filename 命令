@@ -1,37 +1,28 @@
-# mysql数据库
-
-#### 介绍
-mysql数据库命令
-
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+create database 库名;   创建数据库
+show databases;         查看全部已有数据库
+use 库名;               进入改数据库
+SHOW VARIABLES LIKE 'datadir';      查看数据库路径
+drop table 表名;         删表
+alter table 表名 modify column 列名 varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;      使其可以显示中文字
 
 
-#### 特技
+创建一个表(要同时创建列和列的类型) 创建了三个列 name mail number
+use 库名;          创建表之前要指定库
+create table user (
+name int,
+mail varchar(255),
+number int
+);
+查看是否成功创建列
+describe 表名；
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+添加内容
+insert into user (name,mail,number) values ('XX','BBBB','AAAA');
+查看表内容
+select * from 表名;
+
+修改某列的数据类型
+alter table 表名 modify column 列名 varchar(255);
+
+删除表内容
+delete from 表名;
