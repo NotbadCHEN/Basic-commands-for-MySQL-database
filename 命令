@@ -1,6 +1,6 @@
 create database 库名;   创建数据库
 show databases;         查看全部已有数据库
-use 库名;               进入改数据库
+use 库名;               进入该数据库
 SHOW VARIABLES LIKE 'datadir';      查看数据库路径
 drop table 表名;         删表
 alter table 表名 modify column 列名 varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;      使其可以显示中文字
